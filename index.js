@@ -31,6 +31,6 @@ const books = [
   const server = new ApolloServer({ typeDefs, resolvers });
 
 // The `listen` method launches a web server.
-server.listen().then(({ url }) => {
+server.listen({ port:process.env.PORT }).then(({ url }) => {
   console.log(`🚀  Server ready at ${url}`);
 });
